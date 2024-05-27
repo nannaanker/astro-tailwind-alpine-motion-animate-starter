@@ -1,17 +1,18 @@
 ---
 import Button from './Button.astro'
+const { name, date, info, money } = Astro.props;
 ---
 
-<div class="bg-orange-400 flex items-center pt-xl pb-xl pr-xl gap-m md:space-4xl max-w-[393px] md:max-w-[1052px]">
+<div class="bg-orange-400 flex items-center pt-xl pb-xl pr-xl gap-m md:gap-4xl max-w-[393px] md:max-w-[1052px]">
     <img class="h-[120px] md:h-[250px]" src="public/solhalv.png" alt="halv sol"> 
     <div class="flex flex-col justify-end items-start gap-[16px] md:gap-xl shrink-0 md:w-[810px]">
         <div class="flex justify-between items-center">
-        <p>Navn</p>
-        <p>18 - 19 - 20 Juli</p>
+      <h1>{name}</h1>
+        <p>{date}</p>
     </div>
     <div class="flex justify-between items-end">
-        <p>info</p>
-        <p>kr</p>
+       <p>{info}</p>
+       <p>{money}</p>
     </div>
  <div class="flex items-center"><Button variant="secondary">køb billet</Button></div>
     </div>

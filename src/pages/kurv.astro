@@ -1,0 +1,40 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Billet from '../components/Billet.astro'
+import Button from "../components/Button.astro";
+---
+<MainLayout>
+
+    <div class="h-[200px] md:h-[420px] bg-cover -mt-10 bg-[url('/baggrund_billet.webp')]"></div>
+    <div class="overflow-hidden w-full -mt-7 md:-mt-0">
+        <div class="wrapper flex gap-6 md:gap-80">
+          <p class="w-[10rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">BILLETTER</p>
+          <p class="w-[10rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">BILLETTER</p>
+          <p class="w-[10rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">BILLETTER</p>
+          <p class="w-[10rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">BILLETTER</p>
+          <p class="w-[10rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">BILLETTER</p>
+          <p class="w-[10rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">BILLETTER</p>
+          <p class="w-[10rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">BILLETTER</p>
+          <p class="w-[10rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">BILLETTER</p>
+        </div>
+      </div>
+    <section class="bg-blue-600 flex flex-col justify-end items-center md:gap-6xl pt-s pb-s md:pt-3xl md:pb-9xl">
+        <div class="flex flex-col justify-end items-center md:gap-6xl">
+            <div class="flex flex-col justify-center items-start md:gap-6xl">
+        <h1 class="text-m md:text-2xl text-yellow-500">Du har valgt</h1>
+        <div class="flex flex-col justify-center items-start gap-l md:gap-3xl">
+        <div class="w-[393px] md:w-auto"> 
+        <Billet></Billet>
+        <p class="bg-yellow-50 text-blue-700 p-s font-bold text-s md:text-l">Antal billetter</p>
+        </div>
+        <p class="font-roboto text-yellow-50 text-s md:text-m ">I alt: kr. 1.935,00</p>
+       <Button variant="secondary">SHOP VIDERE</Button>
+    </div>
+</div>
+           
+           <a href="/form"> <div class="hidden md:block"><Button>GÅ TIL BETALING</Button></div></a>
+           <a href="/form"><div class="md:hidden"><Button size="small">GÅ TIL BETALING</Button></div></a>
+        
+    </div>
+</section>
+</MainLayout>
