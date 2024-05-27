@@ -1,0 +1,59 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+const kunstnere = await Astro.glob("./kunstnere/*.md");
+const sorteredekunstnere = kunstnere.sort((a, b) => Date.parse(b.frontmatter.dato) - Date.parse(a.frontmatter.dato));
+const udvalgtekunstnere = sorteredekunstnere.slice(0, 9);
+import Button from "../components/Button.astro";
+---
+
+<MainLayout title="Titel">
+  <div class="h-[800px] md:h-[300px] bg-cover bg-[url('/programheader.webp')]"></div>
+
+  <div class="overflow-hidden w-full -mt-7 md:-mt-0">
+    <div class="wrapper flex gap-5 md:gap-80">
+      <p class="w-[8rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">PROGRAM</p>
+      <p class="w-[8rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">PROGRAM</p>
+      <p class="w-[8rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">PROGRAM</p>
+      <p class="w-[8rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">PROGRAM</p>
+      <p class="w-[8rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">PROGRAM</p>
+    </div>
+  </div>
+
+  <section class="bg-blue-600 h-[1150px]">
+    <div class="flex flex-col gap-7xl">
+      <div class="flex gap-8xl justify-center mt-3xl text-yellow-50 font-grotesk font-bold text-l">
+        <a class="hover:text-sennep-500 text-sennep-500" href="">MUSIK</a>
+        <a class="hover:text-sennep-500" href="">EVENTS</a>
+      </div>
+
+      <div class="flex gap-6xl justify-center text-yellow-50 font-grotesk font-bold text-m">
+        <a class="hover:text-sennep-500 text-sennep-500" href="">TORSDAG</a>
+        <a class="hover:text-sennep-500" href="">FREDAG</a>
+        <a class="hover:text-sennep-500" href="">LØRDAG</a>
+      </div>
+    </div>
+
+    <ul id="wrapper" class="grid grid-cols-3 w-[1180px] mt-3xl m-auto">
+      {
+        udvalgtekunstnere.map((post) => (
+          <li id="slide" class=" hover:scale-105 m-auto">
+            <div class="w-96 h-60 relative grid mb-3">
+              <img src={post.frontmatter.coverimage} alt={post.frontmatter.coveralt} class="w-96 h-60" />
+
+              <div class="absolute bottom-0 bg-sennep-100 px-4 py-2 font-roboto">
+                <p class="text-s font-bold">{post.frontmatter.kunstner}</p>
+                <span class="text-s">{post.frontmatter.tid}</span>
+                <p class="text-sm"> {post.frontmatter.kortversion}</p>
+                <a href={post.url} class="" />
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="flex justify-center">
+      <div class="hidden md:block"><Button variant="secondary">GÅ TIL BILLETTER &#8594; </Button></div>
+      <div class="md:hidden"><Button size="secondsmall" variant="secondary">GÅ TIL BILLETTER &#8594; </Button></div>
+    </div>
+  </section>
+</MainLayout>
