@@ -1,0 +1,79 @@
+---
+import Button from "../components/Button.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+
+    <div class="h-[200px] md:h-[420px] bg-cover -mt-10 bg-[url('/baggrund_billet.webp')]"></div>
+    <div class="overflow-hidden w-full -mt-7 md:-mt-0">
+        <div class="wrapper flex gap-6 md:gap-80">
+          <p class="w-[10rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">BILLETTER</p>
+          <p class="w-[10rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">BILLETTER</p>
+          <p class="w-[10rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">BILLETTER</p>
+          <p class="w-[10rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">BILLETTER</p>
+          <p class="w-[10rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">BILLETTER</p>
+          <p class="w-[10rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">BILLETTER</p>
+          <p class="w-[10rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">BILLETTER</p>
+          <p class="w-[10rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">BILLETTER</p>
+        </div>
+      </div>
+    <section class="bg-blue-600 flex flex-col items-center pt-s pb-s md:pt-3xl md:pb-9xl gap-l lg:gap-9xl">
+        
+        <!-- Formular -->
+	<form>
+		
+        <div class="flex flex-col content-center items-center gap-l md:gap-6xl">
+            <h1 class="text-m md:text-2xl text-yellow-500">Dine oplysninger</h1>
+<div>
+    <div class="flex flex-col items-start gap-s md:gap-2xl">
+                <div class="">
+                   
+                    <input  class="w-[290px] md:w-[590px] md:h-[88px] border-2 bg-yellow-100 border-blue-700 placeholder-sennep-700 text-xs md:text-m font-roboto" type="text" id="fuldenavn" name="fuldenavn" placeholder="Fuldenavn">
+                </div>
+                <div class="">
+                    
+                    <input  class="w-[290px] md:w-[590px] md:h-[88px] border-2 bg-yellow-100 border-blue-700 placeholder-sennep-700 text-xs md:text-m font-roboto" type="text" id="fuldenavn" name="fuldenavn" placeholder="E-mail adresse">
+                </div>
+                <div class="">
+                   
+                    <input  class="w-[290px] md:w-[590px] md:h-[88px] border-2 bg-yellow-100 border-blue-700 placeholder-sennep-700 text-xs md:text-m font-roboto" type="text" id="fuldenavn" name="fuldenavn" placeholder="Telefonnummer">
+                </div>
+                <div class="">
+                    
+                    <input  class="w-[290px] md:w-[590px] md:h-[88px] border-2 bg-yellow-100 border-blue-700 placeholder-sennep-700 text-xs md:text-m font-roboto" type="text" id="fuldenavn" name="fuldenavn" placeholder="Land">
+                </div>
+                <div class="">
+                   
+                    <input  class="w-[290px] md:w-[590px] md:h-[88px] border-2 bg-yellow-100 border-blue-700 placeholder-sennep-700 text-xs md:text-m font-roboto" type="text" id="fuldenavn" name="fuldenavn" placeholder="Gade / Vej nr.">
+                </div>
+                <div class="">
+                    
+                    <input  class="w-[290px] md:w-[590px] md:h-[88px] border-2 bg-yellow-100 border-blue-700 placeholder-sennep-700 text-xs md:text-m font-roboto" type="text" id="fuldenavn" name="fuldenavn" placeholder="By">
+                </div>
+                <div class="">
+                    
+                    <input  class="w-[290px] md:w-[590px] md:h-[88px] border-2 bg-yellow-100 border-blue-700 placeholder-sennep-700 text-xs md:text-m font-roboto" type="text" id="fuldenavn" name="fuldenavn" placeholder="Postnummer">
+                </div>
+        
+                <p class="text-yellow-500 text-s md:text-l">Betalingsmetode</p>
+                <div class="flex flex-col gap-m">
+                <div class="flex items-center gap-s">
+                    <input class="border-solid border-2 border-blue-700  bg-yellow-100 w-[20px] h-[20px] md:w-[40px] md:h-[40px]"  type="checkbox" id="kort" name="kort">
+                    <label class="" for="kort"><img class="bg-white p-1 w-[79.547px] h-[26.879px] md:w-[215px] md:h-[69px]" src="/kort.webp" alt="billede af visa, mastercard, dankort"></label>
+                </div>
+        
+                <div class="flex items-center gap-s">
+                    <input class="border-solid border-2 border-blue-700  bg-yellow-100 w-[20px] h-[20px] md:w-[40px] md:h-[40px]"  type="checkbox" id="mobilepay" name="mobilepay">
+                    <label class="" for="mobilepay"><img class="bg-white p-1 w-[79.547px] h-[26.879px] md:w-[215px] md:h-[69px]" src="/mobilepay.webp" alt="billede af mobilepay"></label>
+                </div>
+            </div>
+        </div>
+</div>
+                
+            </div>
+            </form>
+        <div class="hidden md:block"><Button>GÅ TIL BETALING</Button></div>
+      <div class="md:hidden"><Button size="small">GÅ TIL BETALING</Button></div>
+</section>
+</MainLayout>
