@@ -36,24 +36,25 @@ import Button from "../components/Button.astro";
     <ul id="wrapper" class="grid grid-cols-3 w-[1180px] mt-3xl m-auto">
       {
         udvalgtekunstnere.map((post) => (
-          <li id="slide" class=" hover:scale-105 m-auto">
-            <div class="w-96 h-60 relative grid mb-3">
-              <img src={post.frontmatter.coverimage} alt={post.frontmatter.coveralt} class="w-96 h-60" />
+          <a href={post.url} class="">
+            <li id="slide" class=" hover:scale-105 m-auto">
+              <div class="w-96 h-60 relative grid mb-3">
+                <img src={post.frontmatter.coverimage} alt={post.frontmatter.coveralt} class="w-96 h-60" />
 
-              <div class="absolute bottom-0 bg-sennep-100 px-4 py-2 font-roboto">
-                <p class="text-s font-bold">{post.frontmatter.kunstner}</p>
-                <span class="text-s">{post.frontmatter.tid}</span>
-                <p class="text-sm"> {post.frontmatter.kortversion}</p>
-                <a href={post.url} class="" />
+                <div class="absolute bottom-0 bg-sennep-100 px-4 py-2 font-roboto text-red-950">
+                  <p class="text-s font-bold">{post.frontmatter.kunstner}</p>
+                  <span class="text-s">{post.frontmatter.tid}</span>
+                  <p class="text-sm"> {post.frontmatter.kortversion}</p>
+                </div>
               </div>
-            </div>
-          </li>
+            </li>
+          </a>
         ))
       }
+      <div class="flex w-[1180px] pt-3xl justify-end">
+        <div class="hidden md:block"><Button variant="secondary">GÅ TIL BILLETTER &#8594; </Button></div>
+        <div class="md:hidden"><Button size="secondsmall" variant="secondary">GÅ TIL BILLETTER &#8594; </Button></div>
+      </div>
     </ul>
-    <div class="flex justify-center">
-      <div class="hidden md:block"><Button variant="secondary">GÅ TIL BILLETTER &#8594; </Button></div>
-      <div class="md:hidden"><Button size="secondsmall" variant="secondary">GÅ TIL BILLETTER &#8594; </Button></div>
-    </div>
   </section>
 </MainLayout>

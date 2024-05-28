@@ -1,14 +1,29 @@
 ---
+import Button from "../components/Button.astro";
 import MainLayout from "./MainLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
 <MainLayout title="Titel">
-  <div class="max-w-5xl mx-auto px-4">
-    <img src={frontmatter.coverimage} alt={frontmatter.coveralt} class="mb-8" />
-    <section class="prose">
-      <h1>{frontmatter.title}</h1>
-      <slot />
-    </section>
+  <div class="h-[800px] md:h-[300px] bg-cover bg-[url('/programheader.webp')]"></div>
+  <h1 class="font-bold text-3xl pl-9xl text-orange-600 uppercase">{frontmatter.kunstner}</h1>
+  <div class="flex flex-col w-full pl-9xl items-start gap-3xl bg-blue-600">
+    <div class="flex items-end gap-9xl h-[960.064px]">
+      <section class="flex flex-col justify-start gap-xl">
+        <div class="flex flex-col justify-start gap-m">
+          <p class="text-xl text-yellow-500 font-grotesk font-bold">{frontmatter.dato}</p>
+          <p class="text-l text-yellow-50 font-grotesk font-medium">{frontmatter.tid}</p>
+        </div>
+
+        <div class="text-yellow-50 text-s font-roboto font-normal"><slot /></div>
+
+        <a class="mb-3xl" href="">
+          <Button variant="secondary">&#8592;TILBAGE</Button>
+        </a>
+      </section>
+
+      <img src={frontmatter.singleimage} alt={frontmatter.singlealt} class="h-[700px] w-[909.471px] width: ;
+      height: ;" />
+    </div>
   </div>
 </MainLayout>
