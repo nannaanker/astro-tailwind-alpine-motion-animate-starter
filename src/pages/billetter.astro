@@ -17,9 +17,10 @@ import Billet from '../components/Billet.astro'
           <p class="w-[10rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">BILLETTER</p>
         </div>
       </div>
-    <section class="bg-blue-600 lg:p-9xl">
-        
-           <div> <Billet></Billet></div>
-        
+    <section class="bg-blue-600 md:p-9xl flex flex-col justify-center items-center gap-xs pt-s pb-s md:pt-9xl md:pb-9xl md:gap-5xl font-roboto">
+           <Billet button="VÆLG BILLET" style="orange" money="" info="3 - DAGES BILLET" name="PARTOUT BILLETTER"></Billet>
+           <Billet button="VÆLG BILLET" style="blue" money="" info="DAGSBILLET" name="ENDAGSBILLETTER"></Billet>
+           <Billet button="VÆLG BILLET" style="sennep" money="" info="CAMPINGPAKKE" name="MIL - TENTHOUSE"></Billet>
+           <Billet button="VÆLG BILLET" style="red" money="" info="" name="OVERNATNING"></Billet>
 </section>
 </MainLayout>
