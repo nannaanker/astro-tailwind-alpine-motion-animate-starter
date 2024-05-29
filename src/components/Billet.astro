@@ -1,5 +1,6 @@
 ---
 import Button from './Button.astro'
+import Button2 from "../components/Button2.astro";
 const { name, info, info2, info3, money, style, button, } = Astro.props;
 
 const stylecolor={
@@ -26,8 +27,8 @@ const stylecolor={
        <p class="font-bold text-xs md:text-m">{money}</p>
     </div>
  <div class="flex items-center">
- <a href="/tak"> <div class="hidden md:block"><Button variant="secondary">{button}</Button></div></a>
- <a href="/tak"><div class="md:hidden"><Button variant="secondary" size="small">{button}</Button></div></a>
+ <a href="/tak"> <div class="hidden md:block"><Button2 variant="secondary">{button}</Button></div></a>
+ <a href="/tak"><div class="md:hidden"><Button2 size="small">{button}</Button></div></a>
 </div>
     </div>
 </div>
