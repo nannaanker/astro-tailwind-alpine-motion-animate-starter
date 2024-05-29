@@ -1,5 +1,6 @@
 ---
 import Button from "../components/Button.astro";
+import Button2 from "../components/Button2.astro";
 import MainLayout from "./MainLayout.astro";
 const { frontmatter } = Astro.props;
 ---
@@ -17,10 +18,10 @@ const { frontmatter } = Astro.props;
         </div>
 
         <div class="text-yellow-50 text-xs md:text-s font-roboto font-normal"><slot /></div>
-
-        <a class="mb-3xl" href="">
-          <Button variant="secondary">&#8592;TILBAGE</Button>
-        </a>
+        
+        <a class="mb-3xl" href="/program"> <div class="hidden md:block"><Button2 variant="secondary">&#8592; TILBAGE</Button></div></a>
+          <a href="/program"><div class="md:hidden"><Button2 variant="secondary" size="small">&#8592; TILBAGE</Button></div></a>
+        
       </section>
 
       <img src={frontmatter.singleimage} alt={frontmatter.singlealt} class="md:h-[700px] md:w-[909.471px] w-[393px] m-auto md:m-0
