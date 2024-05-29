@@ -4,6 +4,7 @@ const kunstnere = await Astro.glob("./kunstnere/*.md");
 const sorteredekunstnere = kunstnere.sort((a, b) => Date.parse(b.frontmatter.dato) - Date.parse(a.frontmatter.dato));
 const udvalgtekunstnere = sorteredekunstnere.slice(0, 9);
 import Button from "../components/Button.astro";
+import Button2 from "../components/Button2.astro";
 ---
 
 <MainLayout title="Titel">
@@ -57,9 +58,9 @@ import Button from "../components/Button.astro";
         }
       </ul>
     </section>
-    <div class="flex md:w-[1180px] md:m-auto md:justify-end md:pb-s">
-      <div class="hidden md:block"><Button variant="secondary">GÅ TIL BILLETTER &#8594; </Button></div>
-      <div class="md:hidden"><Button size="secondsmall" variant="secondary">GÅ TIL BILLETTER &#8594; </Button></div>
+    <div class="flex md:w-[1180px] md:m-auto md:justify-end md:pb-m">
+      <div class="hidden md:block"><Button2>SE DET FULDE PROGRAM &#8594; </Button2></div>
+      <div class="md:hidden"><Button2 size="small">SE DET FULDE PROGRAM &#8594; </Button2></div>
     </div>
   </div>
 </MainLayout>

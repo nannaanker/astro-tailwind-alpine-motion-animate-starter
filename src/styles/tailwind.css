@@ -39,7 +39,7 @@
   }
   @keyframes slide2 {
     from{
-      transform:translate(-45rem)
+      transform:translate(-48rem)
     }
     
     to{
@@ -79,7 +79,7 @@
       }
     @keyframes slide2 {
         from{
-          transform:translate(-13.5rem)
+          transform:translate(-14.5rem)
         }
         
         to{

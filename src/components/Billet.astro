@@ -15,18 +15,18 @@ const stylecolor={
     <img class="h-[120px] md:h-[250px]" src="public/solhalv.png" alt="halv sol"> 
     <div class="flex flex-col justify-end items-start">
         <div class="font-bold md:flex md:justify-items-between gap-x-[16px] md:gap-x-xl flex-wrap items-center">
-      <h1 class="text-s md:text-l">{name}</h1>
-        <p class="md:text-m">18 - 19 - 20 Juli</p>
+      <h1 class="font-grotesk text-s md:text-l">{name}</h1>
+        <p class="pt-2 pb-2 font-roboto md:text-m">18 - 19 - 20 Juli</p>
     </div>
     <div class="md:flex md:justify-between md:items-end">
-      <div class="flex flex-col gap-xs max-w-[40ch]">
+      <div class=" font-roboto flex flex-col gap-xs max-w-[32ch] md:max-w-[25ch]">
        <p >{info}</p>
        <p >{info2}</p>
        <p >{info3}</p>
       </div>
-       <p class="font-bold text-xs md:text-m">{money}</p>
+       <p class="pt-2 md:pt-0 font-roboto font-bold text-xs md:text-m">{money}</p>
     </div>
- <div class="flex items-center">
+ <div class="flex items-center pt-s">
  <a href={href} class="hidden md:block"><Button2 variant="secondary">{button}</Button></a>
  <div class="md:hidden"><Button2 size="small">{button}</Button></div>
 </div>
