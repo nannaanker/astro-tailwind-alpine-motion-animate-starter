@@ -1,6 +1,7 @@
 ---
 import Button from './Button.astro'
-const { name, info, info2, info3, money, style, button, } = Astro.props;
+import Button2 from "../components/Button2.astro";
+const { name, info, info2, info3, money, style, button, href } = Astro.props;
 
 const stylecolor={
   red:"bg-red-200 text-red-800 ",
@@ -9,16 +10,16 @@ const stylecolor={
   sennep:"bg-sennep-300 text-sennep-900"
 }
 ---
-<div class={`${stylecolor[style]}`}>
-<div class=" flex items-center pt-s pb-s pr-s gap-m md:gap-4xl max-w-[393px] md:max-w-[1052px]">
+<div class={`${stylecolor[style]} min-w-[0] md:min-w-[600px]`}>
+<div class=" flex items-center pt-s pb-s pr-s gap-m md:gap-4xl">
     <img class="h-[120px] md:h-[250px]" src="public/solhalv.png" alt="halv sol"> 
-    <div class="flex flex-col justify-end items-start gap-[16px] md:gap-xl shrink-0 w-full">
-        <div class=" font-bold flex justify-between items-center w-full">
+    <div class="flex flex-col justify-end items-start">
+        <div class="font-bold md:flex md:justify-items-between gap-x-[16px] md:gap-x-xl flex-wrap items-center">
       <h1 class="text-s md:text-l">{name}</h1>
         <p class="md:text-m">18 - 19 - 20 Juli</p>
     </div>
-    <div class="flex justify-between items-end w-full">
-      <div class="flex flex-col gap-xs">
+    <div class="md:flex md:justify-between md:items-end">
+      <div class="flex flex-col gap-xs max-w-[40ch]">
        <p >{info}</p>
        <p >{info2}</p>
        <p >{info3}</p>
@@ -26,8 +27,8 @@ const stylecolor={
        <p class="font-bold text-xs md:text-m">{money}</p>
     </div>
  <div class="flex items-center">
- <a href="/tak"> <div class="hidden md:block"><Button variant="secondary">{button}</Button></div></a>
- <a href="/tak"><div class="md:hidden"><Button variant="secondary" size="small">{button}</Button></div></a>
+ <a href={href} class="hidden md:block"><Button2 variant="secondary">{button}</Button></a>
+ <div class="md:hidden"><Button2 size="small">{button}</Button></div>
 </div>
     </div>
 </div>

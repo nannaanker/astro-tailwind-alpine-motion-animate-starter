@@ -1,3 +1,14 @@
 *{
     border: 1px solid hotpink;
 }
+@font-face {
+    font-family: 'grotesk';
+    src: url('/fonts/grotesk.ttf') format('ttf');
+    
+    font-style: normal;
+    font-display: swap;
+  }
+
+  p{
+font-family: "grotesk";
+  }
