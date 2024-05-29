@@ -7,10 +7,10 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Titel">
-  <div class="h-[800px] md:h-[300px] bg-cover bg-[url('/programheader.webp')]"></div>
+  <div class="h-[200px] md:h-[420px] bg-cover bg-[url('/program.webp')]"></div>
 
-  <div class="overflow-hidden w-full -mt-7 md:-mt-0">
-    <div class="wrapper flex gap-5 md:gap-80">
+  <div class="overflow-hidden w-full md:-mt-0">
+    <div class="wrapper flex gap-8xl md:gap-80">
       <p class="w-[8rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">PROGRAM</p>
       <p class="w-[8rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">PROGRAM</p>
       <p class="w-[8rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">PROGRAM</p>
@@ -19,41 +19,44 @@ import Button from "../components/Button.astro";
     </div>
   </div>
 
-  <section class="bg-blue-600 h-[1150px]">
-    <div class="flex flex-col gap-7xl">
-      <div class="flex gap-8xl justify-center mt-3xl text-yellow-50 font-grotesk font-bold text-l">
-        <a class="hover:text-sennep-500 text-sennep-500" href="">MUSIK</a>
-        <a class="hover:text-sennep-500" href="">EVENTS</a>
+  <div class="bg-blue-600">
+    <section class="md:h-[1100px] h-[1070px]">
+      <div class="flex flex-col gap-m md:gap-7xl">
+        <div class="flex gap-8xl justify-center mt-3xl text-yellow-50 font-grotesk font-bold text-m md:text-l">
+          <a class="hover:text-sennep-500 text-sennep-500" href="">MUSIK</a>
+          <a class="hover:text-sennep-500" href="">EVENTS</a>
+        </div>
+
+        <div class="flex gap-xl md:gap-6xl justify-center text-yellow-50 font-grotesk font-bold text-s md:text-m">
+          <a class="hover:text-sennep-500 text-sennep-500" href="">TORSDAG</a>
+          <a class="hover:text-sennep-500" href="">FREDAG</a>
+          <a class="hover:text-sennep-500" href="">LØRDAG</a>
+        </div>
       </div>
 
-      <div class="flex gap-6xl justify-center text-yellow-50 font-grotesk font-bold text-m">
-        <a class="hover:text-sennep-500 text-sennep-500" href="">TORSDAG</a>
-        <a class="hover:text-sennep-500" href="">FREDAG</a>
-        <a class="hover:text-sennep-500" href="">LØRDAG</a>
-      </div>
-    </div>
+      <ul id="wrapper" class="grid grid-cols-2 sm:grid-cols-3 md:w-[1180px] mt-3xl m-auto pl-3 md:pl-0">
+        {
+          udvalgtekunstnere.map((post) => (
+            <a href={post.url} class="">
+              <li id="slide" class=" hover:scale-105 m-auto">
+                <div class="w-[170px] h-40 md:w-96 md:h-[228px] relative grid mb-3">
+                  <img src={post.frontmatter.coverimage} alt={post.frontmatter.coveralt} class="w-[170px] md:w-96" />
 
-    <ul id="wrapper" class="grid grid-cols-3 w-[1180px] mt-3xl m-auto">
-      {
-        udvalgtekunstnere.map((post) => (
-          <li id="slide" class=" hover:scale-105 m-auto">
-            <div class="w-96 h-60 relative grid mb-3">
-              <img src={post.frontmatter.coverimage} alt={post.frontmatter.coveralt} class="w-96 h-60" />
-
-              <div class="absolute bottom-0 bg-sennep-100 px-4 py-2 font-roboto">
-                <p class="text-s font-bold">{post.frontmatter.kunstner}</p>
-                <span class="text-s">{post.frontmatter.tid}</span>
-                <p class="text-sm"> {post.frontmatter.kortversion}</p>
-                <a href={post.url} class="" />
-              </div>
-            </div>
-          </li>
-        ))
-      }
-    </ul>
-    <div class="flex justify-center">
+                  <div class="absolute bottom-0 w-[170px]  bg-sennep-100 px-2 md:px-4 py-2 font-roboto text-red-950">
+                    <p class="text-xs md:text-s font-bold">{post.frontmatter.kunstner}</p>
+                    <span class="text-xs md:text-s">{post.frontmatter.tid}</span>
+                    <p> {post.frontmatter.kortversion}</p>
+                  </div>
+                </div>
+              </li>
+            </a>
+          ))
+        }
+      </ul>
+    </section>
+    <div class="flex md:w-[1180px] md:m-auto md:justify-end md:pb-s">
       <div class="hidden md:block"><Button variant="secondary">GÅ TIL BILLETTER &#8594; </Button></div>
       <div class="md:hidden"><Button size="secondsmall" variant="secondary">GÅ TIL BILLETTER &#8594; </Button></div>
     </div>
-  </section>
+  </div>
 </MainLayout>
