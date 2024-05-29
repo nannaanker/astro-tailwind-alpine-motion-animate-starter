@@ -1,19 +1,31 @@
 ---
 import Button from './Button.astro'
-const { name, info, money } = Astro.props;
----
+const { name, info, info2, info3, money, style, button } = Astro.props;
 
-<div class="bg-orange-400 flex items-center pt-s pb-s pr-s gap-m md:gap-4xl max-w-[393px] md:max-w-[1052px]">
+const stylecolor={
+  red:"bg-red-200 text-red-800 ",
+  blue:"bg-blue-200 text-blue-900",
+  orange:"bg-orange-400 text-orange-800",
+  sennep:"bg-sennep-300 text-sennep-900"
+}
+---
+<div class={`${stylecolor[style]}`}>
+<div class=" flex items-center pt-s pb-s pr-s gap-m md:gap-4xl max-w-[393px] md:max-w-[1052px]">
     <img class="h-[120px] md:h-[250px]" src="public/solhalv.png" alt="halv sol"> 
-    <div class="flex flex-col justify-end items-start gap-[16px] md:gap-xl shrink-0 w-[290px] md:w-[810px]">
-        <div class="flex justify-between items-center w-[290px] md:w-[800px]">
-      <h1>{name}hej</h1>
-        <p>18 - 19 - 20 Juli</p>
+    <div class="flex flex-col justify-end items-start gap-[16px] md:gap-xl shrink-0 w-full">
+        <div class=" font-bold flex justify-between items-center w-full">
+      <h1 class="text-s md:text-l">{name}</h1>
+        <p class="md:text-m">18 - 19 - 20 Juli</p>
     </div>
-    <div class="flex justify-between items-end w-[290px] md:w-[800px]">
-       <p>{info}hej</p>
-       <p>{money}hej</p>
+    <div class="flex justify-between items-end w-full">
+      <div class="flex flex-col gap-xs">
+       <p >{info}</p>
+       <p >{info2}</p>
+       <p >{info3}</p>
+      </div>
+       <p class="font-bold text-xs md:text-m">{money}</p>
     </div>
- <div class="flex items-center"><Button variant="secondary">Køb billet</Button></div>
+ <div class="flex items-center"><Button variant="secondary">{button}</Button></div>
     </div>
+</div>
 </div>
