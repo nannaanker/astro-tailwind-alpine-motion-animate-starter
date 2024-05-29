@@ -18,17 +18,23 @@ import Button from "../components/Button.astro";
           <p class="w-[10rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">BILLETTER</p>
         </div>
       </div>
-    <section class="bg-blue-600 flex flex-col justify-end items-center md:gap-6xl pt-s pb-s md:pt-3xl md:pb-9xl">
-        <div class="flex flex-col justify-end items-center md:gap-6xl">
-            <div class="flex flex-col justify-center items-start md:gap-6xl">
-        <h1 class="text-m md:text-2xl text-yellow-500">Du har valgt</h1>
-        <div class="flex flex-col justify-center items-start gap-l md:gap-3xl">
-        <div class="w-[393px] md:w-auto"> 
-        <Billet></Billet>
-        <p class="bg-yellow-50 text-blue-700 p-s font-bold text-s md:text-l">Antal billetter</p>
-        </div>
+    <section class="bg-blue-600 flex flex-col self-center items-center gap-l md:gap-6xl pt-s pb-s md:pt-3xl md:pb-9xl">
+      <h1 class="font-bold text-l md:text-2xl text-yellow-500">Du har valgt</h1>  
+      <div class="flex flex-col justify-end items-center md:gap-6xl">
+    
+        <div class="flex flex-col justify-center items-start gap-m md:gap-3xl">
+       <div class="flex flex-col items-center ">
+          <Billet></Billet>
+          <div class="flex items-center gap-xs md:gap-s p-xs bg-yellow-50 w-[393px] md:w-[1020px]">
+        <p class=" text-blue-700 font-bold text-xs md:text-l">Antal billetter 1</p>
+        <img class="w-[10px] md:w-auto" src="/arrow.svg" alt="op og ned pile">
+      </div>
+      </div>
+      <div class="flex pl-m flex-col items-start gap-xs ">
         <p class="font-roboto text-yellow-50 text-s md:text-m ">I alt: kr. 1.935,00</p>
-       <Button variant="secondary">SHOP VIDERE</Button>
+        <a href="/tak"> <div class="hidden md:block"><Button variant="secondary">SHOP VIDERE</Button></div></a>
+        <a href="/tak"><div class="md:hidden"><Button variant="secondary" size="small">SHOP VIDERE</Button></div></a>
+      </div>
     </div>
 </div>
            

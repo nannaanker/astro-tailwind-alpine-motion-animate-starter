@@ -1,19 +1,19 @@
 ---
 import Button from './Button.astro'
-const { name, date, info, money } = Astro.props;
+const { name, info, money } = Astro.props;
 ---
 
-<div class="bg-orange-400 flex items-center pt-xl pb-xl pr-xl gap-m md:gap-4xl max-w-[393px] md:max-w-[1052px]">
+<div class="bg-orange-400 flex items-center pt-s pb-s pr-s gap-m md:gap-4xl max-w-[393px] md:max-w-[1052px]">
     <img class="h-[120px] md:h-[250px]" src="public/solhalv.png" alt="halv sol"> 
-    <div class="flex flex-col justify-end items-start gap-[16px] md:gap-xl shrink-0 md:w-[810px]">
-        <div class="flex justify-between items-center">
-      <h1>{name}</h1>
-        <p>{date}</p>
+    <div class="flex flex-col justify-end items-start gap-[16px] md:gap-xl shrink-0 w-[290px] md:w-[810px]">
+        <div class="flex justify-between items-center w-[290px] md:w-[800px]">
+      <h1>{name}hej</h1>
+        <p>18 - 19 - 20 Juli</p>
     </div>
-    <div class="flex justify-between items-end">
-       <p>{info}</p>
-       <p>{money}</p>
+    <div class="flex justify-between items-end w-[290px] md:w-[800px]">
+       <p>{info}hej</p>
+       <p>{money}hej</p>
     </div>
- <div class="flex items-center"><Button variant="secondary">køb billet</Button></div>
+ <div class="flex items-center"><Button variant="secondary">Køb billet</Button></div>
     </div>
 </div>
