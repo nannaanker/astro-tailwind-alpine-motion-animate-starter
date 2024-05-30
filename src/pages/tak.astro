@@ -10,4 +10,60 @@ import MainLayout from "../layouts/MainLayout.astro";
         <p class="font-roboto text-yellow-50 text-center text-s md:text-l">Vi har sendt en bekræftelse på <br> din mail</p>
 
       </section>
+
+      <div class="grid">
+        <div class="col-start-1 row-start-1">
+          <video class="w-full" autoplay muted loop>
+            <source src="/videocountdown.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="col-start-1 row-start-1 w-full bg-red-950 bg-opacity-50"></div>
+        <div class="col-start-1 row-start-1 lg:pt-20 -mt-12 md:-mt-32 xl:-mt-5">
+          <div class="flex justify-center font-bold text-yellow-50 font-grotesk text-m md:text-xl mt-20 mb-5 md:mt-32"><p>VI SES OM</p></div>
+          <div x-data="{
+        endDate: new Date('2024-07-18T23:59:59').getTime(),
+        remainingTime: 0,
+        formatTime(time) {
+          const days = Math.floor(time / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((time % (1000 * 60)) / 1000);
+          return { days, hours, minutes, seconds };
+        }
+      }" x-init="() => {
+        setInterval(() => {
+          const now = new Date().getTime();
+          const remainingTime = endDate - now;
+          $data.remainingTime = remainingTime > 0 ? remainingTime : 0;
+        }, 1000);
+      }">
+            <template x-if="remainingTime > 0">
+              <div class="flex flex-row gap-7 md:gap-32 text-center justify-center font-bold text-yellow-50 font-grotesk">
+                <div>
+                  <div class="text-l md:text-4xl" x-text="formatTime(remainingTime).days"></div>
+                  <div class="text-[13px] md:text-m">DAGE</div>
+                </div>
+                <div>
+                  <div class="text-l md:text-4xl" x-text="formatTime(remainingTime).hours"></div>
+                  <div class="text-[13px] md:text-m">TIMER</div>
+                </div>
+                <div>
+                  <div class="text-l md:text-4xl" x-text="formatTime(remainingTime).minutes"></div>
+                  <div class="text-[13px] md:text-m">MINUTTER</div>
+                </div>
+                <div>
+                  <div class="text-l md:text-4xl" x-text="formatTime(remainingTime).seconds"></div>
+                  <div class="text-[13px] md:text-m">SEKUNDER</div>
+                </div>
+              </div>
+            </template>
+            <template x-if="remainingTime <= 0">
+              <div>
+                <div></div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+      </div>
 </MainLayout>
