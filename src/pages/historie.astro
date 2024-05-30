@@ -4,7 +4,41 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout>
-  <div class="h-[950px] bg-contain bg-no-repeat md:bg-cover bg-[url('/his.webp')]">
-    <p class="text-l md:text-2xl xl:text-4xl flex pt-72 text-yellow-500 font-bold justify-center">MUSIK I LEJET</p>
+  <div class="bg-cover bg-[url('/his.webp')]">
+    <p class="text-l md:text-2xl xl:text-4xl flex pt-9xl text-yellow-500 pb-[900px] font-bold justify-center">MUSIK I LEJET</p>
   </div>
+
+  <div class="grid grid-cols-2 max-w-xl mx-auto items-center prose">
+    <section id="horisontalscrollsection" class="relative">
+      <ul id="horisontalliste" class="list-none flex sticky top-0">
+        <li class="flex items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><img class="w-[600px] h-[400px]" src="/aften.webp" alt="foto" /></li>
+        <li class="flex items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><img class="w-[600px] h-[400px]" src="/aften.webp" alt="foto" /></li>
+        <li class="flex items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><img class="w-[600px] h-[400px]" src="/aften.webp" alt="foto" /></li>
+        <li class="flex items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><img class="w-[600px] h-[400px]" src="/aften.webp" alt="foto" /></li>
+        <li class="flex items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><img class="w-[600px] h-[400px]" src="/aften.webp" alt="foto" /></li>
+        <li class="flex items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><img class="w-[600px] h-[400px]" src="/aften.webp" alt="foto" /></li>
+        <li class="flex items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><img class="w-[600px] h-[400px]" src="/aften.webp" alt="foto" /></li>
+        <li class="flex items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><img class="w-[600px] h-[400px]" src="/aften.webp" alt="foto" /></li>
+        <li class="flex items-start justify-center flex-col overflow-hidden flex-grow-0 flex-shrink-0 flex-auto"><img class="w-[600px] h-[400px]" src="/aften.webp" alt="foto" /></li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="bg-cover bg-[url('/historie2.webp')]">
+    <p class="text-l md:text-2xl xl:text-4xl flex pt-4xl text-red-500 pb-[900px] font-bold justify-center">HISTORIEN BAG</p>
+    <div class=""></div>
+  </div>
+
+  <script>
+    import { animate, stagger, inView, scroll, timeline } from "motion";
+
+    const items = document.querySelectorAll("#horisontalliste li");
+
+    scroll(
+      animate("#horisontalliste", {
+        transform: ["none", `translateX(-${items.length - 1}00vw)`],
+      }),
+      { target: document.querySelector("#horisontalscrollsection") }
+    );
+  </script>
 </MainLayout>
