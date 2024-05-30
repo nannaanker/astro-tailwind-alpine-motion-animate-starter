@@ -9,16 +9,15 @@ import Button2 from "../components/Button2.astro";
     <h1 class="text-l font-grotesk md:text-2xl xl:text-4xl flex pt-72 text-yellow-500 font-bold justify-center">MUSIK I LEJET</h1>
     <div class="flex justify-center mt-10 pb-80 md:pb-60">
       <a href="/billetter">
-      <div class="hidden md:block"><Button>BILLETTER</Button></div>
-      <div class="md:hidden"><Button size="small">BILLETTER</Button></div>
-    </a>
+        <div class="hidden md:block"><Button>BILLETTER</Button></div>
+        <div class="md:hidden"><Button size="small">BILLETTER</Button></div>
+      </a>
     </div>
   </div>
 
   <div class="overflow-hidden w-full -mt-7 md:-mt-0">
-
     <!-- RULLENDE TEKST -->
-    <div class=" wrapper flex gap-5 md:gap-20">
+    <div class="wrapper flex gap-5 md:gap-20">
       <p class="w-[8rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">MUSIK</p>
       <p class="w-[8rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">MUSIK</p>
       <p class="w-[8rem] text-l text-red-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">MUSIK</p>
@@ -50,16 +49,16 @@ import Button2 from "../components/Button2.astro";
       </div>
       <p class="font-grotesk md:text-m mb-5 md:mb-10">Tina Dickow</p>
       <a href="/program">
-      <div class="hidden md:block"><Button2>SE DET FULDE PROGRAM </Button2></div>
-      <div class="md:hidden"><Button2 size="small">SE DET FULDE PROGRAM</Button2></div>
-    </a>
+        <div class="hidden md:block"><Button2>SE DET FULDE PROGRAM </Button2></div>
+        <div class="md:hidden"><Button2 size="small">SE DET FULDE PROGRAM</Button2></div>
+      </a>
     </div>
   </div>
 
-<!-- RULLENDE TEKST -->
+  <!-- RULLENDE TEKST -->
 
   <div class="overflow-hidden bg-blue-600 w-full md:-mt-0">
-    <div class=" wrapper flex gap-20 md:gap-[20rem]">
+    <div class="wrapper flex gap-20 md:gap-[20rem]">
       <p class="w-[8rem] text-l text-yellow-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">NYHEDER</p>
       <p class="w-[8rem] text-l text-yellow-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">NYHEDER</p>
       <p class="w-[8rem] text-l text-yellow-500 font-bold font-grotesk md:w-[22rem] md:text-3xl">NYHEDER</p>
@@ -73,8 +72,9 @@ import Button2 from "../components/Button2.astro";
       <div id="wrapper" class="overflow-hidden flex snap-x scrollbar-hide pt-2">
         <!-- Item 1 -->
         <a href="aften">
-          <div id="slide" class="duration-700 hover:scale-105 ease-in-out shrink-0 snap-center bg-[url('/aften.webp')] w-[600px] h-80 bg-cover flex flex-col justify-end text-red-950 font-grotesk text-xs md:text-s">
-            <div class="font-roboto w-full h-16 md:h-20 bg-sennep-100 pl-3 pt-2">
+          <div id="slide" class="duration-700 overflow-clip ease-in-out shrink-0 snap-center w-[600px] h-80 bg-cover flex flex-col justify-end text-red-950 font-grotesk text-xs md:text-s">
+            <img class="hover:scale-125" src="/aften.webp" alt="" />
+            <div class="w-full h-16 md:h-20 bg-sennep-100 pl-3 pt-2 z-10">
               <p>5. marts 2024</p>
               <p class="font-bold">JA TAK til MiL - Sommerens Festival fortsætter</p>
             </div>
@@ -83,8 +83,9 @@ import Button2 from "../components/Button2.astro";
 
         <!-- Item 2 -->
         <a href=""
-          ><div class="duration-700 hover:scale-105 ease-in-out shrink-0 snap-center bg-[url('/musik.webp')] w-[600px] h-80 bg-cover flex flex-col justify-end text-red-950 font-grotesk text-xs md:text-s">
-            <div class="font-roboto w-full h-16 md:h-20 bg-yellow-100 pl-3 pt-2">
+          ><div class="duration-700 ease-in-out shrink-0 snap-center overflow-clip w-[600px] h-80 bg-cover flex flex-col justify-end text-red-950 font-grotesk text-xs md:text-s">
+            <img class="hover:scale-125" src="/musik.webp" alt="" />
+            <div class="w-full h-16 md:h-20 bg-yellow-100 pl-3 pt-2 z-10">
               <p>5. marts 2024</p>
               <p class="font-bold">JA TAK til MiL - Sommerens Festival fortsætter</p>
             </div>
@@ -93,8 +94,9 @@ import Button2 from "../components/Button2.astro";
 
         <!-- Item 3 -->
         <a href="">
-          <div class="duration-700 hover:scale-105 ease-in-out shrink-0 snap-center bg-[url('/mad.webp')] w-[600px] h-80 bg-cover flex flex-col justify-end text-red-950 font-grotesk text-xs md:text-s">
-            <div class="font-roboto w-full h-16 md:h-20 bg-sennep-100 pl-3 pt-2">
+          <div class="duration-700 ease-in-out shrink-0 snap-center overflow-clip w-[600px] h-80 bg-cover flex flex-col justify-end text-red-950 font-grotesk text-xs md:text-s">
+            <img class="hover:scale-125" src="/mad.webp" alt="" />
+            <div class="w-full h-16 md:h-20 bg-sennep-100 pl-3 pt-2 z-10">
               <p>5. marts 2024</p>
               <p class="font-bold">JA TAK til MiL - Sommerens Festival fortsætter</p>
             </div>
@@ -103,8 +105,9 @@ import Button2 from "../components/Button2.astro";
 
         <!-- Item 4 -->
         <a href="">
-          <div class="duration-700 hover:scale-105 ease-in-out shrink-0 snap-center bg-[url('/volley.webp')] w-[600px] h-80 bg-cover flex flex-col justify-end text-red-950 font-grotesk text-xs md:text-s">
-            <div class="font-roboto w-full h-16 md:h-20 bg-yellow-100 pl-3 pt-2">
+          <div class="duration-700 overflow-clip ease-in-out shrink-0 snap-center w-[600px] h-80 bg-cover flex flex-col justify-end text-red-950 font-grotesk text-xs md:text-s">
+            <img class="hover:scale-125" src="/volley.webp" alt="" />
+            <div class="w-full h-16 md:h-20 bg-yellow-100 pl-3 pt-2 z-10">
               <p>5. marts 2024</p>
               <p class="font-bold">JA TAK til MiL - Sommerens Festival fortsætter</p>
             </div>
@@ -113,8 +116,9 @@ import Button2 from "../components/Button2.astro";
 
         <!-- Item 5 -->
         <a href="">
-          <div class="duration-700 hover:scale-105 ease-in-out shrink-0 snap-center bg-[url('/elektronisk.webp')] w-[600px] h-80 bg-cover flex flex-col justify-end text-red-950 font-grotesk text-xs md:text-s">
-            <div class="font-roboto w-full h-16 md:h-20 bg-sennep-100 pl-3 pt-2">
+          <div class="duration-700 overflow-clip ease-in-out shrink-0 snap-center w-[600px] h-80 bg-cover flex flex-col justify-end text-red-950 font-grotesk text-xs md:text-s">
+            <img class="hover:scale-125" src="/elektronisk.webp" alt="" />
+            <div class="w-full h-16 md:h-20 bg-sennep-100 pl-3 pt-2 z-10">
               <p>5. marts 2024</p>
               <p class="font-bold">JA TAK til MiL - Sommerens Festival fortsætter</p>
             </div>
@@ -122,9 +126,9 @@ import Button2 from "../components/Button2.astro";
         </a>
       </div>
 
-      <div class="flex justify-end md:mt-8 mr-3 mt-2 md:mr-5">
-        <div class="hidden md:block"><Button2>SE ALLE NYHEDER </Button2></div>
-        <div class="md:hidden"><Button2 size="small">SE ALLE NYHEDER</Button2></div>
+      <div class="flex justify-end md:mt-3 mr-3 mt-2 md:mr-5">
+        <div class="hidden md:block"><Button2>SE ALLE NYHEDER &#8594; </Button2></div>
+        <div class="md:hidden"><Button2 size="small">SE ALLE NYHEDER &#8594; </Button2></div>
       </div>
 
       <button id="prevbtn" type="button" class="flex absolute top-1/3 left-3 z-40 items-center justify-center md:w-16 md:h-16 rounded-full bg-sennep-100 focus:outline-none transition">

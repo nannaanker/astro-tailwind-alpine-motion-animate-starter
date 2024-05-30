@@ -40,14 +40,14 @@ import Button2 from "../components/Button2.astro";
         </div>
       </div>
 
-      <!-- KUNSTNEREN -->
+      <!-- KUNSTNERE -->
       <ul id="wrapper" class="grid grid-cols-2 sm:grid-cols-3 md:w-[1180px] mt-3xl m-auto pl-3 md:pl-0">
         {
           udvalgtekunstnere.map((post) => (
             <a href={post.url} class="">
-              <li id="slide" class=" hover:scale-105 m-auto">
-                <div class="w-[170px] h-40 md:w-96 md:h-[228px] relative grid mb-3">
-                  <img src={post.frontmatter.coverimage} alt={post.frontmatter.coveralt} class="w-[170px] md:w-96" />
+              <li id="slide" class=" m-auto">
+                <div class="w-[170px] h-40 md:w-96 md:h-[228px] relative grid mb-3 overflow-clip">
+                  <img src={post.frontmatter.coverimage} alt={post.frontmatter.coveralt} class="w-[170px] md:w-96 hover:scale-125" />
 
                   <div class="absolute bottom-0 w-[170px]  bg-sennep-100 px-2 md:px-4 py-2 font-roboto text-red-950">
                     <p class="text-xs md:text-s font-bold">{post.frontmatter.kunstner}</p>
