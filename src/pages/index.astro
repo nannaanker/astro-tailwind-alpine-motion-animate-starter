@@ -4,9 +4,9 @@ import Button from "../components/Button.astro";
 ---
 
 <MainLayout title="Titel">
-  <div class="h-[800px] md:h-[920px] bg-cover bg-[url('/hero2.webp')]">
+  <div class="bg-cover bg-[url('/hero2.webp')]">
     <p class="text-l md:text-2xl xl:text-4xl flex pt-72 text-yellow-500 font-bold justify-center">MUSIK I LEJET</p>
-    <div class="flex justify-center mt-10">
+    <div class="flex justify-center mt-10 md:pb-60">
       <div class="hidden md:block"><Button>BILLETTER</Button></div>
       <div class="md:hidden"><Button size="small">BILLETTER</Button></div>
     </div>
@@ -25,8 +25,8 @@ import Button from "../components/Button.astro";
     </div>
   </div>
 
-  <div class="h-[970px] md:h-[1100px] bg-contain bg-no-repeat md:bg-cover grid justify-center bg-[url('/artistoverblikmobil.webp')] md:bg-[url('/artistoverblik.webp')]">
-    <div class="text-yellow-50 font-grotesk text-center pt-[100px] md:pt-[232px] bg-contain bg-no-repeat mt-5 md:mt-40 bg-[url('/sol2.png')] md:bg-[url('/sol.png')] w-[355px] md:w-[1000px] md:h-[800px]">
+  <div class="bg-contain bg-no-repeat md:bg-cover grid justify-center bg-[url('/artistoverblikmobil.webp')] md:bg-[url('/artistoverblik.webp')]">
+    <div class="text-yellow-50 font-grotesk text-center md:mb-40 pt-[100px] md:pt-[245px] bg-contain bg-no-repeat mt-5 md:mt-52 bg-[url('/sol2.png')] md:bg-[url('/sol.png')] w-[355px] md:w-[1000px] md:h-[800px]">
       <p class="font-bold text-m md:text-xl">When Saints Go Machine</p>
       <div class="flex flex-row justify-center md:mb-5">
         <p class="font-bold md:text-l">Atigeardit x Lamin</p>
@@ -58,9 +58,9 @@ import Button from "../components/Button.astro";
     </div>
   </div>
 
-  <div class="w-full -mt-2 md:-mt-2 bg-blue-600 h-[650px] md:h-[900px]">
+  <div class="w-full -mt-2 md:-mt-2 bg-blue-600">
     <div class="relative max-w-10xl m-auto">
-      <div id="wrapper" class="overflow-hidden flex snap-x scrollbar-hide gap-2 pt-2">
+      <div id="wrapper" class="overflow-hidden flex snap-x scrollbar-hide pt-2">
         <!-- Item 1 -->
         <a href="aften">
           <div id="slide" class="duration-700 hover:scale-105 ease-in-out shrink-0 snap-center bg-[url('/aften.webp')] w-[600px] h-80 bg-cover flex flex-col justify-end text-red-950 font-grotesk text-xs md:text-s">
@@ -74,7 +74,7 @@ import Button from "../components/Button.astro";
         <!-- Item 2 -->
         <a href=""
           ><div class="duration-700 hover:scale-105 ease-in-out shrink-0 snap-center bg-[url('/musik.webp')] w-[600px] h-80 bg-cover flex flex-col justify-end text-red-950 font-grotesk text-xs md:text-s">
-            <div class="w-full h-16 md:h-20 bg-sennep-100 pl-3 pt-2">
+            <div class="w-full h-16 md:h-20 bg-yellow-100 pl-3 pt-2">
               <p>5. marts 2024</p>
               <p class="font-bold">JA TAK til MiL - Sommerens Festival fortsætter</p>
             </div>
@@ -94,7 +94,7 @@ import Button from "../components/Button.astro";
         <!-- Item 4 -->
         <a href="">
           <div class="duration-700 hover:scale-105 ease-in-out shrink-0 snap-center bg-[url('/volley.webp')] w-[600px] h-80 bg-cover flex flex-col justify-end text-red-950 font-grotesk text-xs md:text-s">
-            <div class="w-full h-16 md:h-20 bg-sennep-100 pl-3 pt-2">
+            <div class="w-full h-16 md:h-20 bg-yellow-100 pl-3 pt-2">
               <p>5. marts 2024</p>
               <p class="font-bold">JA TAK til MiL - Sommerens Festival fortsætter</p>
             </div>
@@ -112,21 +112,31 @@ import Button from "../components/Button.astro";
         </a>
       </div>
 
-      <button id="prevbtn" type="button" class="flex absolute top-1/3 left-3 z-40 items-center justify-center w-20 h-20 focus:outline-none transition">
-        <svg class="h-16 w-16 md:h-20 md:w-20 text-yellow-500 hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <div class="flex justify-end mt-2"><Button variant="secondary">SE ALLE NYHEDER &#8594;</Button></div>
+
+      <button id="prevbtn" type="button" class="flex absolute top-1/3 left-3 z-40 items-center justify-center w-16 h-16 rounded-full bg-sennep-100 focus:outline-none transition">
+        <svg class="h-16 w-16 md:h-20 md:w-20 text-yellow-950" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-width="2" d="M15 19l-7-7 7-7"></path>
         </svg>
       </button>
-      <button id="nextbtn" type="button" class="flex absolute top-1/3 right-3 z-40 items-center justify-center w-20 h-20 focus:outline-none transition">
-        <svg class="h-16 w-16 md:h-20 md:w-20 text-yellow-500 hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <button id="nextbtn" type="button" class="flex absolute top-1/3 right-3 z-40 items-center justify-center w-16 h-16 rounded-full bg-sennep-100 focus:outline-none transition">
+        <svg class="h-16 w-16 md:h-20 md:w-20 text-yellow-950" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path stroke-width="2" d="M9 5l7 7-7 7"></path>
         </svg>
       </button>
     </div>
 
-    <div class="flex justify-center font-bold text-yellow-50 font-grotesk text-s md:text-l mt-20 mb-5 md:mt-32"><p>VI SES OM</p></div>
-    <div x-data="{
-      endDate: new Date('2024-05-31T23:59:59').getTime(),
+    <div class="grid mt-20">
+      <div class="col-start-1 row-start-1">
+        <video class="w-full" autoplay muted loop>
+          <source src="/videocountdown.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="col-start-1 row-start-1 w-full bg-red-950 bg-opacity-50"></div>
+      <div class="col-start-1 row-start-1 lg:pt-20">
+        <div class="flex justify-center font-bold text-yellow-50 font-grotesk text-s md:text-l mt-20 mb-5 md:mt-32"><p>VI SES OM</p></div>
+        <div x-data="{
+      endDate: new Date('2024-06-18T23:59:59').getTime(),
       remainingTime: 0,
       formatTime(time) {
         const days = Math.floor(time / (1000 * 60 * 60 * 24));
@@ -142,38 +152,34 @@ import Button from "../components/Button.astro";
         $data.remainingTime = remainingTime > 0 ? remainingTime : 0;
       }, 1000);
     }">
-      <template x-if="remainingTime > 0">
-        <div class="flex flex-row gap-7 md:gap-32 text-center justify-center font-bold text-yellow-50 font-grotesk">
-          <div>
-            <div class="text-xl md:text-4xl" x-text="formatTime(remainingTime).days"></div>
-            <div>DAGE</div>
-          </div>
-          <div>
-            <div class="text-xl md:text-4xl" x-text="formatTime(remainingTime).hours"></div>
-            <div>TIMER</div>
-          </div>
-          <div>
-            <div class="text-xl md:text-4xl" x-text="formatTime(remainingTime).minutes"></div>
-            <div>MINUTTER</div>
-          </div>
-          <div>
-            <div class="text-xl md:text-4xl" x-text="formatTime(remainingTime).seconds"></div>
-            <div>SEKUNDER</div>
-          </div>
+          <template x-if="remainingTime > 0">
+            <div class="flex flex-row gap-7 md:gap-32 text-center justify-center font-bold text-yellow-50 font-grotesk">
+              <div>
+                <div class="text-xl md:text-4xl" x-text="formatTime(remainingTime).days"></div>
+                <div class="md:text-m">DAGE</div>
+              </div>
+              <div>
+                <div class="text-xl md:text-4xl" x-text="formatTime(remainingTime).hours"></div>
+                <div class="md:text-m">TIMER</div>
+              </div>
+              <div>
+                <div class="text-xl md:text-4xl" x-text="formatTime(remainingTime).minutes"></div>
+                <div class="md:text-m">MINUTTER</div>
+              </div>
+              <div>
+                <div class="text-xl md:text-4xl" x-text="formatTime(remainingTime).seconds"></div>
+                <div class="md:text-m">SEKUNDER</div>
+              </div>
+            </div>
+          </template>
+          <template x-if="remainingTime <= 0">
+            <div>
+              <div></div>
+            </div>
+          </template>
         </div>
-      </template>
-      <template x-if="remainingTime <= 0">
-        <div>
-          <div></div>
-        </div>
-      </template>
+      </div>
     </div>
-  </div>
-
-  <div class="relative w-full">
-    <video class="w-full brightness-70" autoplay muted loop>
-      <source src="/videocountdown.mp4" type="video/mp4" />
-    </video>
   </div>
 
   <script>
