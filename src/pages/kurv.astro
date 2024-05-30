@@ -1,51 +1,48 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Billet from '../components/Billet.astro'
+import Billet from "../components/Billet.astro";
 import Button from "../components/Button.astro";
 import Button2 from "../components/Button2.astro";
 ---
+
 <MainLayout>
-
-    <div class="h-[200px] md:h-[420px] bg-cover -mt-10 bg-[url('/baggrund_billet.webp')]"></div>
-    <div class="overflow-hidden w-full md:-mt-0">
-
-      <!-- RULLENDE TEKST -->
-      <div class="wrapperpartout flex gap-10 md:gap-32">
-        <p class="w-[12rem] text-l text-red-500 font-bold font-grotesk md:w-[40rem] md:text-3xl">BILLETTER</p>
-        <p class="w-[12rem] text-l text-red-500 font-bold font-grotesk md:w-[40rem] md:text-3xl">BILLETTER</p>
-        <p class="w-[12rem] text-l text-red-500 font-bold font-grotesk md:w-[40rem] md:text-3xl">BILLETTER</p>
-        <p class="w-[12rem] text-l text-red-500 font-bold font-grotesk md:w-[40rem] md:text-3xl">BILLETTER</p>
-        <p class="w-[12rem] text-l text-red-500 font-bold font-grotesk md:w-[40rem] md:text-3xl">BILLETTER</p>
-        <p class="w-[12rem] text-l text-red-500 font-bold font-grotesk md:w-[40rem] md:text-3xl">BILLETTER</p>
-        <p class="w-[12rem] text-l text-red-500 font-bold font-grotesk md:w-[40rem] md:text-3xl">BILLETTER</p>
-        <p class="w-[12rem] text-l text-red-500 font-bold font-grotesk md:w-[40rem] md:text-3xl">BILLETTER</p>
-      </div>
+  <div class="h-[200px] md:h-[420px] bg-cover -mt-10 bg-[url('/baggrund_billet.webp')]"></div>
+  <div class="overflow-hidden w-full md:-mt-0">
+    <!-- RULLENDE TEKST -->
+    <div class="wrapperpartout flex gap-10 md:gap-32">
+      <p class="w-[12rem] text-l text-red-500 font-bold font-grotesk md:w-[40rem] md:text-3xl">BILLETTER</p>
+      <p class="w-[12rem] text-l text-red-500 font-bold font-grotesk md:w-[40rem] md:text-3xl">BILLETTER</p>
+      <p class="w-[12rem] text-l text-red-500 font-bold font-grotesk md:w-[40rem] md:text-3xl">BILLETTER</p>
+      <p class="w-[12rem] text-l text-red-500 font-bold font-grotesk md:w-[40rem] md:text-3xl">BILLETTER</p>
+      <p class="w-[12rem] text-l text-red-500 font-bold font-grotesk md:w-[40rem] md:text-3xl">BILLETTER</p>
+      <p class="w-[12rem] text-l text-red-500 font-bold font-grotesk md:w-[40rem] md:text-3xl">BILLETTER</p>
+      <p class="w-[12rem] text-l text-red-500 font-bold font-grotesk md:w-[40rem] md:text-3xl">BILLETTER</p>
+      <p class="w-[12rem] text-l text-red-500 font-bold font-grotesk md:w-[40rem] md:text-3xl">BILLETTER</p>
     </div>
-    <section class="bg-blue-600 flex flex-col self-center items-center gap-l md:gap-6xl pt-s pb-s md:pt-3xl md:pb-9xl">
-      <h1 class="font-bold text-l md:text-2xl text-yellow-500">Du har valgt</h1>  
-      <div class="flex flex-col justify-end items-center md:gap-6xl">
-    
-        <div class="flex flex-col justify-center items-start gap-m md:gap-3xl">
-       <div class="flex flex-col items-center ">
-          <Billet button="KØB BILLET" style="orange" money="Kr. 1.935,00" info="" name="ALMINDELIG"></Billet>
+  </div>
+  <section class="bg-blue-600 flex flex-col self-center items-center gap-l md:gap-6xl pt-s pb-s md:pt-3xl md:pb-9xl">
+    <h1 class="font-bold text-l md:text-2xl text-yellow-500">Du har valgt</h1>
+    <div class="flex flex-col justify-end items-center md:gap-6xl">
+      <div class="flex flex-col justify-center items-start gap-m md:gap-3xl">
+        <div class="flex flex-col items-center">
+          <Billet button="KØB BILLET" style="orange" money="Kr. 1.935,00" info="" name="ALMINDELIG" />
           <div class="flex items-center gap-xs md:gap-s p-xs bg-yellow-50 w-full">
-        <p class=" text-blue-700 font-bold text-xs md:text-l">Antal billetter 1</p>
-        <img class="w-[10px] md:w-auto" src="/arrow.svg" alt="op og ned pile">
-      </div>
-      </div>
-      <div class="flex pl-m flex-col items-start gap-xs ">
-        <p class="font-roboto text-yellow-50 text-s md:text-m ">I alt: kr. 1.935,00</p>
-        <a href="/billetter"> <div class="hidden md:block"><Button2 variant="secondary">SHOP VIDERE</Button></div></a>
-        <a href="/billetter"><div class="md:hidden"><Button2 variant="secondary" size="small">SHOP VIDERE</Button></div></a>
+            <p class="text-blue-700 font-bold text-xs md:text-l">Antal billetter 1</p>
+            <img class="w-[10px] md:w-auto" src="/arrow.svg" alt="op og ned pile" />
+          </div>
+        </div>
+        <div class="flex pl-m flex-col items-start gap-xs">
+          <p class="font-roboto text-yellow-50 text-s md:text-m">I alt 1.935.00 kr</p>
+          <a href="/billetter"> <div class="hidden md:block"><Button2 variant="secondary">SHOP VIDERE</Button2></div></a>
+          <a href="/billetter"><div class="md:hidden"><Button2 variant="secondary" size="small">SHOP VIDERE</Button2></div></a>
+        </div>
       </div>
     </div>
-</div>
-           
-           <a href="/form"> <div class="hidden md:block"><Button>GÅ TIL BETALING</Button></div></a>
-           <a href="/form"><div class="md:hidden"><Button size="small">GÅ TIL BETALING</Button></div></a>
-        
-    </div>
-</section>
+
+    <a href="/form"> <div class="hidden md:block"><Button>GÅ TIL BETALING</Button></div></a>
+    <a href="/form"><div class="md:hidden"><Button size="small">GÅ TIL BETALING</Button></div></a>
+  </section>
+</MainLayout>
 
 <!-- COUNTDOWN MED VIDEO -->
 <div class="grid">
@@ -102,5 +99,3 @@ import Button2 from "../components/Button2.astro";
     </div>
   </div>
 </div>
-</div>
-</MainLayout>
